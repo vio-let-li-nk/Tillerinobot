@@ -14,27 +14,27 @@ public class Default implements Language {
 
 	@Override
 	public String unknownBeatmap() {
-		return "I'm sorry, I don't know that map. It might be very new, very hard, unranked or not standard osu mode.";
+		return "Maaf, saya tidak tahu beatmap tersebut. Ia mungkin baru, terlalu susah, belum dikemukakan, ataupun bukan mod standard osu.";
 	}
 
 	@Override
 	public String internalException(String marker) {
-		return "Ugh... Looks like human Tillerino screwed up my wiring."
-				+ " If he doesn't notice soon, could you [https://github.com/Tillerino/Tillerinobot/wiki/Contact inform him]? (reference "
+		return "Alamak... Tillerino versi manusia mengacau pendawaian aku."
+				+ " Jika dia tidak sedar, bolehkah anda [https://github.com/Tillerino/Tillerinobot/wiki/Contact beritahu dia]? (reference "
 				+ marker + ")";
 	}
 
 	@Override
 	public String externalException(String marker) {
-		return "What's going on? I'm only getting nonsense from the osu server. Can you tell me what this is supposed to mean? 0011101001010000"
-				+ " Human Tillerino says that this is nothing to worry about, and that we should try again."
-				+ " If you're super worried for some reason, you can [https://github.com/Tillerino/Tillerinobot/wiki/Contact tell him] about it. (reference "
+		return "Apa terjadi ini? Pelayan osu hanya memberi saya gangguan. Bolehkah anda memberitahu saya maksudnya? 0011101001010000"
+				+ " Tillerino versi manusia memberitahu aku, anda tidak perlu risau tentang apa-apa, dan kita hanya perlu mencuba sekali lagi. "
+				+ " Jika memang kamu risau tentang perkara berikut, anda boleh [https://github.com/Tillerino/Tillerinobot/wiki/Contact memberitahu dia] tentang perkara ini. (reference "
 				+ marker + ")";
 	}
 
 	@Override
 	public String noInformationForModsShort() {
-		return "no data for requested mods";
+		return "Tiada data untuk mod yang diminta.";
 	}
 
 	@Override
@@ -42,17 +42,17 @@ public class Default implements Language {
 		if(inactiveTime < 60 * 1000) {
 			user.message("beep boop");
 		} else if(inactiveTime < 24 * 60 * 60 * 1000) {
-			user.message("Welcome back, " + apiUser.getUserName() + ".");
+			user.message("Selamat datang kembali, " + apiUser.getUserName() + ".");
 		} else if(inactiveTime > 7l * 24 * 60 * 60 * 1000) {
 			user.message(apiUser.getUserName() + "...");
-			user.message("...is that you? It's been so long!");
-			user.message("It's good to have you back. Can I interest you in a recommendation?");
+			user.message("...adakah itu kamu? Wah, lamanya sudah!");
+			user.message("Memang baguslah untuk berjumpa anda sekali lagi. Adakah anda berminat untuk aku mencadang lagu?");
 		} else {
 			String[] messages = {
-					"you look like you want a recommendation.",
-					"how nice to see you! :)",
-					"my favourite human. (Don't tell the other humans!)",
-					"what a pleasant surprise! ^.^",
+					"Anda memang kelihatan hendak akan cadangan aku.",
+					"Memang baik melihat anda! :)",
+					"Manusia kegemaran aku. (Jangan memberitahu manusia yang lain!)",
+					"Ah, ini adalah kejutan yang menyenangkan! ^.^",
 					"I was hoping you'd show up. All the other humans are lame, but don't tell them I said that! :3",
 					"what do you feel like doing today?",
 			};
